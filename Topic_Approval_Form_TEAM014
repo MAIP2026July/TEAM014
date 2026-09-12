@@ -2,24 +2,36 @@ Topic Approval Form
 
 Team Name
 TEAM014
+
 Team Members
 1.	Jerina Jose - 2025MB26077 – 8281813189
 2.	Naveenchandra L - 2025MB26078 – 9591810551
 3.	Mohanarao chippada - 2025MB26130 - 8951158816
+
 Working Title
 AI-Assisted Ratings and Regulations Intelligence for Automotive Safety Engineers
+
 Industry / Function
 Automotive Industry - Safety Engineering and Regulatory Compliance
+
 Target User
-The main users will be newly joined automotive safety engineers who need to understand safety regulations as part of their day-to-day work. Safety leads and subject-matter experts (SMEs) will also be involved when expert validation or clarification is required.
+The main users will be newly joined automotive safety engineers who need to understand safety regulations as part of their day-to-day work. 
+Safety leads and subject-matter experts (SMEs) will also be involved when expert validation or clarification is required.
+
 Current Workflow Problem
-New safety engineers need to understand and work with different automotive safety regulations such as ECE, FMVSS, NCAP and IIHS requirements. These regulations are often lengthy, technical and updated regularly.
-At present, an engineer may need to search through multiple documents, identify the relevant section, understand the technical meaning and then confirm the interpretation with an experienced SME. This can take considerable time, especially for someone who is new to the organisation or the domain.
-As a result, the onboarding process can take longer, engineers may depend heavily on SMEs for routine questions, and decisions related to design or compliance may be delayed.
+New safety engineers need to understand and work with different automotive safety regulations such as ECE, FMVSS, NCAP and IIHS requirements. 
+These regulations are often lengthy, technical and updated regularly.
+At present, an engineer may need to search through multiple documents, identify the relevant section, understand the technical meaning 
+and then confirm the interpretation with an experienced SME. This can take considerable time, especially for someone who is new to the organisation or the domain.
+As a result, the onboarding process can take longer, engineers may depend heavily on SMEs for routine questions, 
+and decisions related to design or compliance may be delayed.
+
 Why This Matters
 Understanding the correct regulatory requirement is important because these requirements can directly influence automotive safety-related engineering decisions.
+If engineers spend too much time searching for information or are unsure about how a requirement applies to a 
+particular product or market, it can lead to additional clarification, rework or delays. A solution that helps engineers find and 
+understand the right regulatory information more quickly could improve the learning process and reduce the effort spent on routine queries.
 
-If engineers spend too much time searching for information or are unsure about how a requirement applies to a particular product or market, it can lead to additional clarification, rework or delays. A solution that helps engineers find and understand the right regulatory information more quickly could improve the learning process and reduce the effort spent on routine queries.
 Proposed AI Role
 We propose an AI-assisted regulatory intelligence tool that can help engineers find and understand relevant regulatory information.
 The AI could:
@@ -30,16 +42,22 @@ The AI could:
 5. Compare different versions of a regulation and highlight important changes.
 6. Help identify potentially relevant requirements based on the product and target market.
 The purpose is not to replace regulatory or safety experts. Instead, the AI would act as a supporting tool that helps engineers learn and find information faster.
+
 Why AI Instead of a Simpler Alternative?
-A normal document repository or keyword-based search could help engineers locate documents, but the engineer would still have to go through the documents and interpret the relevant information.
+A normal document repository or keyword-based search could help engineers locate documents, 
+but the engineer would still have to go through the documents and interpret the relevant information.
 A simple FAQ system would also be limited to questions that have already been anticipated and documented.
-AI can provide more value because engineers can ask questions in their own words. Using semantic search and retrieval-augmented generation (RAG), the system can identify relevant information from approved regulatory sources and provide a contextual explanation along with the supporting clause.
+AI can provide more value because engineers can ask questions in their own words. Using semantic search and retrieval-augmented generation (RAG), 
+the system can identify relevant information from approved regulatory sources and provide a contextual explanation along with the supporting clause.
 However, the AI should be restricted to trusted sources so that answers can be verified.
+
 Human-in-the-Loop Design
 The AI will support the engineer but will not make the final compliance decision.
-
-For routine questions, the system can provide an answer along with the relevant regulatory source. If the system has low confidence, cannot find sufficient supporting information, or the question has a significant safety or compliance impact, it should direct the engineer to a qualified safety or regulatory SME.
+For routine questions, the system can provide an answer along with the relevant regulatory source. If the system has low confidence, 
+cannot find sufficient supporting information, or the question has a significant safety or compliance impact, it should direct the 
+engineer to a qualified safety or regulatory SME.
 The final interpretation and approval of regulatory requirements will remain with the appropriate human expert.
+
 Smallest Credible MVP
 The first version will focus on AI-assisted regulatory question answering and clause discovery.
 A new engineer would:
@@ -49,10 +67,13 @@ A new engineer would:
 4. See the relevant regulatory clause or source used for the answer.
 5. Get a warning or escalation option when the answer requires expert verification.
 Features such as detailed regulation-version comparison and automatic change highlighting can be added after the basic workflow is validated.
+
 Build vs Buy vs API View
 We would prefer an API-based approach rather than developing a large language model from scratch.
-The solution can use an existing LLM/API together with a controlled and approved regulatory knowledge base. RAG can be used to retrieve relevant regulatory content before generating an answer.
-The main product value would come from the quality of the regulatory knowledge base, retrieval process, source traceability, product/market context and human-review workflow rather than from building a foundation model ourselves.
+The solution can use an existing LLM/API together with a controlled and approved regulatory knowledge base. RAG can be used to 
+retrieve relevant regulatory content before generating an answer.
+The main product value would come from the quality of the regulatory knowledge base, retrieval process, source traceability, 
+product/market context and human-review workflow rather than from building a foundation model ourselves.
 
 Main Risks
 The main risks identified are:
@@ -60,6 +81,7 @@ The main risks identified are:
 2. Outdated information: A regulation may change, so the knowledge base needs to be maintained and version controlled.
 3. Over-reliance on AI: Engineers may accept an AI response without verifying it, particularly when they are new to the domain.
 These risks can be reduced through approved sources, source citations, version control, confidence indicators and mandatory SME review for high-impact cases.
+
 Success Evidence
 The success of the MVP can be evaluated using measures such as:
 1. Reduction in the time required to find relevant regulatory information.
@@ -68,6 +90,11 @@ The success of the MVP can be evaluated using measures such as:
 4. Feedback from newly joined engineers on ease of learning and information retrieval.
 5. Reduction in routine regulatory questions handled directly by SMEs.
 6. Appropriate escalation of uncertain or high-impact questions.
+
 Team Recommendation
 Proceed with a narrow MVP and controlled pilot.
-The initial focus should be on helping new safety engineers find and understand relevant regulatory information rather than trying to build a complete regulatory compliance system. If the MVP demonstrates reliable information retrieval, useful explanations and appropriate human escalation, the solution can later be expanded to regulation comparison, change tracking and broader product-market applicability.
+
+The initial focus should be on helping new safety engineers find and understand relevant regulatory information 
+rather than trying to build a complete regulatory compliance system. If the MVP demonstrates reliable information retrieval, 
+useful explanations and appropriate human escalation, the solution can later be expanded to regulation comparison, 
+change tracking and broader product-market applicability.

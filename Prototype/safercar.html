@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Safe Is My Car? | www.safercar.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #3b82f6;
+            --accent: #10b981;
+            --text-light: #f8fafc;
+            --text-dark: #1e293b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            color: var(--text-dark);
+        }
+
+        /* Navbar */
+        header {
+            background-color: var(--primary);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            color: var(--text-light);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            color: #94a3b8;
+        }
+
+        .tagline strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .search-box {
+            background: white;
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            outline: none;
+        }
+
+        .search-box button {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: #2563eb;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .features-header {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+            border-top: 4px solid var(--secondary);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="https://www.safercar.com" class="logo">How Safe Is <span>My Car?</span></a>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#compare">Compare</a>
+            <a href="#insurance">Insurance</a>
+            <a href="#dealers">Find a Dealer</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>How Safe Is My Car?</h1>
+        <p class="tagline">Life is irreplaceable. <strong>Don't leave your family's safety to chance.</strong> Ask our AI assistant to ensure your next journey is protected against the unexpected.</p>
+        
+        <div class="search-box">
+            <input type="text" placeholder="E.g., Honda Civic 2024 vs Toyota Corolla..." aria-label="Search car">
+            <button type="button">Ask AI</button>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2 class="features-header">Empowering Your Car Buying Decision</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-icon">🌍</div>
+                <h3>Global Crash Ratings</h3>
+                <p>Check official crash test ratings (NCAP, NHTSA, etc.) for any car available in the market, localized automatically based on your country.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚖️</div>
+                <h3>Crash Rating Comparisons</h3>
+                <p>Don't just look at one car. Compare the structural integrity and crash test scores of multiple vehicles side-by-side.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <h3>ADAS Feature Matching</h3>
+                <p>Compare Advanced Driver Assistance Systems (ADAS) like lane assist, emergency braking, and adaptive cruise control across models.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>General Feature Comparison</h3>
+                <p>Beyond safety, compare engine specs, interior features, infotainment, and dimensions to find the perfect all-around fit.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📑</div>
+                <h3>Insurance & Cost Analysis</h3>
+                <p>Review and compare possible insurance policies tailored to your selected cars, including estimated premium costs and coverage details.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💬</div>
+                <h3>Instant Dealer Connect</h3>
+                <p>Ready to buy? Get instant dealer contact details for your chosen car, complete with direct WhatsApp links for quick, hassle-free quotations.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 <a href="https://www.safercar.com">www.safercar.com</a>. All rights reserved. | Powered by AI</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+@startuml
+!theme plain
+skinparam componentStyle rectangle
+
+package "Client Frontend" {
+  [safercar.html] as Client
+}
+
+package "API Gateway (FastAPI / Envoy Proxy)" as Gateway {
+  [Geo-IP Detection (User Country)]
+  [Auth & Rate Limiting]
+}
+
+package "Orchestration Layer (LangGraph)" as Orchestrator {
+  [Intent Classification]
+  [Query Decomposer & Router]
+}
+
+database "PostgreSQL / Supabase\n(Relational DB)" as RelDB {
+  [• NCAP Star Ratings\n• Structural Metrics\n• ADAS Feature Flags\n• Dealer Geolocation/GIS\n• Fixed Insurance Tariffs] as RelData
+}
+
+database "Vector Database\n(Qdrant / pgvector)" as VecDB {
+  [• Full Crash Test Reports\n• NCAP Technical Footnotes\n• Insurance Policy T&Cs\n• OEM Brochure Excerpts] as VecData
+}
+
+package "Hallucination Shield\n(Guardrails AI / NeMo Guardrails)" as Shield
+
+package "Core Reasoning Engine\n(Claude 3.5 Sonnet / GPT-4o / DeepSeek-V3)" as Engine
+
+package "Post-Generation Verifier\n(Asserts ratings match database IDs)" as Verifier
+
+package "Dynamic UI Engine (Cards)" as UIEngine
+
+Client --> Gateway : REST / WebSocket
+Gateway --> Orchestrator
+
+Orchestrator --> RelDB : Structured/Exact Retrieval
+Orchestrator --> VecDB : Unstructured Semantic Search
+
+RelDB --> Shield : Context Aggregation
+VecDB --> Shield : Context Aggregation
+
+Shield --> Engine : Verified Context + Prompt
+Engine --> Verifier : Structured JSON / Response
+Verifier --> UIEngine : Streamed Response
+
+@enduml

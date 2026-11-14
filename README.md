@@ -4,8 +4,10 @@ Team Member 2: Naveenchandra L - 2025MB26078 - 9591810551
 Team Member 3: Mohanarao chippada - 2025MB26130 - 8951158816
 
 What is safer car AI SaaS Application?
+-------------------------------------
 
 Market Opportunity and Problem Statement
+========================================
 
 The Global Safety Imperative: With over 1.16 million fatalities and up to 50 million injuries reported globally in 2025 (WHO*), automotive safety is a paramount concern and a primary driver for modern car buyers.
 
